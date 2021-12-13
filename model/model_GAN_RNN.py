@@ -6,6 +6,9 @@ from theano import tensor as T
 from collections import OrderedDict
 #from theano.compat.python2x import OrderedDict
 
+#TODO: https://stackoverflow.com/questions/51238578/error-non-constant-expression-cannot-be-narrowed-from-type-npy-intp-to-int
+theano.config.gcc.cxxflags = "-Wno-c++11-narrowing"
+
 theano.config.floatX = 'float64'
 
 
